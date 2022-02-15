@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
@@ -13,8 +14,12 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+      <img src="/images/profile.jpg" alt="Your Name" />
+      <h1 className="title">
+          Read{' '}
+          <Link href="/posts/first-post">
+            <a>this page!</a>
+          </Link>
         </h1>
 
         <p className={styles.description}>
@@ -67,6 +72,20 @@ const Home: NextPage = () => {
       </footer>
     </div>
   )
+}
+
+export async function getStaticProps() {
+  // Call an external API endpoint to get posts
+  // const res = await fetch('/api/hello')
+  
+
+  // By returning { props: { posts } }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      "res":"123"
+    },
+  }
 }
 
 export default Home
