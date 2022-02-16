@@ -3,8 +3,11 @@ import { useEffect } from "react"
 const About = (props) =>{
   useEffect(()=>{
     (async()=>{
-      const re = await fetch('/api/hello')
-      console.log(re.json())
+      const re = await fetch('/api/hello').then((res)=>{
+        console.log("res",res)
+        console.log(res.json())
+      })
+      
     })()
   },[])
     return(

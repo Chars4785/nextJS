@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 import Link from 'next/link'
 
 const Home: NextPage = () => {
@@ -73,19 +73,12 @@ const Home: NextPage = () => {
     </div>
   )
 }
-
-export async function getStaticProps() {
-  // Call an external API endpoint to get posts
-  // const res = await fetch('/api/hello')
-  
-
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
-  return {
-    props: {
-      "res":"123"
-    },
-  }
+function App(){
+  return(
+    <div>
+      
+    </div>
+  )
 }
 
-export default Home
+export default App
