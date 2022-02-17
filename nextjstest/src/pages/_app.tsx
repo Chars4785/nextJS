@@ -7,6 +7,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from 'react-query'
+import 'antd/dist/antd.css';
 import CustomLayout from '../components/blocks/CustomLayout/CustomLayout';
 
 const queryClient = new QueryClient()
