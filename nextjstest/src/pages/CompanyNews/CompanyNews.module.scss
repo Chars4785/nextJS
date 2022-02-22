@@ -1,26 +1,21 @@
 .root{
-    max-width: 60rem;
+    column-count: 5;
+    column-gap: 10px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: masonry;
-    gap: 1em;
-    columns: var(4);
-    .cnt{
-        padding: 2em;
-        box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
-        background: white;
-        // max-width:500px;
-        .cntWrap{
-            img{
-                border: 0;
-                height: auto;
-                max-width: 100%;
-                vertical-align: middle;
-            }
-            .cntContainer{
-
-            }
+    height: 100%;
+    max-width: 1260px;
+    background-color: white;
+    .cntWrap{
+        max-width:120px;
+        border: solid;
+        margin: 5px;
+        overflow:hidden;
+        break-inside: avoid-column;
+        img{
+            max-width:120px;
+            display: block;
+        }
+    .cntContainer{
         }
     }
 }
