@@ -15,7 +15,17 @@
             max-width:120px;
             display: block;
         }
-    .cntContainer{
+        .cntContainer{
+            
+        }
+    }
+    .plusWrapper{
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        img{
+            height: 50px;
+            width: 50px;
         }
     }
 }
