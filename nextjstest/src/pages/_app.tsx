@@ -9,6 +9,7 @@ import {
 } from 'react-query'
 import 'antd/dist/antd.css';
 import CustomLayout from '../components/blocks/CustomLayout/CustomLayout';
+import { ReactQueryDevtools } from 'react-query/devtools'
 
 const queryClient = new QueryClient()
 
@@ -18,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <CustomLayout>
         <Component {...pageProps} />
       </CustomLayout>
+      <ReactQueryDevtools initialIsOpen={true} />
     </QueryClientProvider>
   ) 
 }
