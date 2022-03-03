@@ -16,6 +16,10 @@ export default function handler(
   res: NextApiResponse<Data>
 ) {
   setTimeout(()=>{
-    res.status(200).json(userInfo)  
-  },5000)
+    const { query } = req;
+    res.status(200).json({
+      ...userInfo,
+      query,
+    })  
+  },10000)
 }

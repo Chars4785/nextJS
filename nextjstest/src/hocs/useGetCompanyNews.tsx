@@ -19,6 +19,8 @@ export default function useGetCompanyNews(){
     return useQuery( 'getcompanynews,', fetchCompany,
     {
         staleTime: 60 * 1000,
+        // 캐시 타임 10초
+        cacheTime: 10000,
         initialData: () =>{
             const re = queryClient.getQueryData('todos')?.find(d => d.id === todoId)
             console.log("re",re);
